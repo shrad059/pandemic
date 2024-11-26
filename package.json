@@ -3,12 +3,12 @@
   "version": "0.0.2",
   "description": "Pandemic information projected on a globe map",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config=webpack.prod.js",
-    "build-dev": "webpack --config=webpack.dev.js",
-    "start": "webpack serve webpack-dev-server --open --config=webpack.dev.js"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --config=webpack.prod.js",
+  "build-dev": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --config=webpack.dev.js",
+  "start": "export NODE_OPTIONS=--openssl-legacy-provider && webpack serve webpack-dev-server --open --config=webpack.dev.js"
+},
   "keywords": [
     "pandemic",
     "covid",
